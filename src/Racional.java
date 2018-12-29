@@ -144,5 +144,23 @@ public class Racional {
 		return resultado;
 	}
 	
+	public static Racional divideRacional(Racional a, Racional b) {
+		
+		Racional resultado = new Racional();
+		int numerador, denominador;
+		
+		resultado.setNumerador(a.getNumerador() * b.getDenominador());
+		resultado.setDenominador(a.getDenominador() * b.getNumerador());
+		
+		numerador = resultado.getNumerador();
+		denominador = resultado.getDenominador();
+		
+		resultado.setNumerador(resultado.getNumerador() / calculaMDC(numerador, denominador));
+		resultado.setDenominador(resultado.getDenominador() / calculaMDC(numerador, denominador));
+		
+		return resultado;
+		
+	}
+	
 	
 }

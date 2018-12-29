@@ -14,6 +14,10 @@ public class RacionalTeste {
 		Racional mult2 = new Racional(10, 6);
 		Racional resMult = Racional.multiplicaRacional(mult1, mult2);
 		
+		Racional div1 = new Racional(9, 2);
+		Racional div2 = new Racional(7, 3);
+		Racional resDiv = Racional.divideRacional(div1, div2);
+		
 		System.out.println("Soma entre frações:\n");
 		
 		System.out.printf("%d/%d + %d/%d = %d/%d", soma1.getNumerador(), soma1.getDenominador(), soma2.getNumerador(),
@@ -28,6 +32,11 @@ public class RacionalTeste {
 		
 		System.out.printf("%d/%d * %d/%d = %d/%d", mult1.getNumerador(), mult1.getDenominador(), mult2.getNumerador(),
 				mult2.getDenominador(), resMult.getNumerador(), resMult.getDenominador());
+		
+		System.out.println("\n\nDivisão entre frações:\n");
+		
+		System.out.printf("%d/%d * %d/%d = %d/%d", div1.getNumerador(), div1.getDenominador(), div2.getNumerador(),
+				div2.getDenominador(), resDiv.getNumerador(), resDiv.getDenominador());
 	}
 
 }
