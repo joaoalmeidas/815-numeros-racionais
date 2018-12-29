@@ -169,7 +169,6 @@ public class Racional {
 	
 	public String toString(int digitos) {
 		
-		
 		String zeros = "";
 		
 		if(digitos > 0) {
