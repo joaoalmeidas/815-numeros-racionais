@@ -74,6 +74,7 @@ public class Racional {
 	public static Racional somaRacional(Racional a, Racional b) {
 		
 		Racional resultado = new Racional();
+		int numerador, denominador;
 		
 		if(a.getDenominador() == b.getDenominador()) {
 			
@@ -88,8 +89,11 @@ public class Racional {
 			
 		}
 		
-		resultado.setNumerador(resultado.getNumerador() / calculaMDC(resultado.getNumerador(), resultado.getDenominador()));
-		resultado.setDenominador(resultado.getDenominador() / calculaMDC(resultado.getNumerador(), resultado.getDenominador()));
+		numerador = resultado.getNumerador();
+		denominador = resultado.getDenominador();
+		
+		resultado.setNumerador(resultado.getNumerador() / calculaMDC(numerador, denominador));
+		resultado.setDenominador(resultado.getDenominador() / calculaMDC(numerador, denominador));
 		
 		return resultado;
 	}
@@ -97,6 +101,7 @@ public class Racional {
 	public static Racional subtraiRacional(Racional a, Racional b) {
 		
 		Racional resultado = new Racional();
+		int numerador, denominador;
 		
 		if(a.getDenominador() == b.getDenominador()) {
 			
@@ -111,12 +116,32 @@ public class Racional {
 			
 		}
 		
-		resultado.setNumerador(resultado.getNumerador() / calculaMDC(resultado.getNumerador(), resultado.getDenominador()));
-		resultado.setDenominador(resultado.getDenominador() / calculaMDC(resultado.getNumerador(), resultado.getDenominador()));
+		numerador = resultado.getNumerador();
+		denominador = resultado.getDenominador();
+		
+		resultado.setNumerador(resultado.getNumerador() / calculaMDC(numerador, denominador));
+		resultado.setDenominador(resultado.getDenominador() / calculaMDC(numerador, denominador));
 
 		
 		return resultado;
 		
+	}
+	
+	public static Racional multiplicaRacional(Racional a, Racional b) {
+		
+		Racional resultado = new Racional();
+		int numerador, denominador;
+		
+		resultado.setNumerador(a.getNumerador() * b.getNumerador());
+		resultado.setDenominador(a.getDenominador() * b.getDenominador());
+		
+		numerador = resultado.getNumerador();
+		denominador = resultado.getDenominador();
+		
+		resultado.setNumerador(resultado.getNumerador() / calculaMDC(numerador, denominador));
+		resultado.setDenominador(resultado.getDenominador() / calculaMDC(numerador, denominador));
+		
+		return resultado;
 	}
 	
 	
