@@ -10,44 +10,9 @@ public class Racional {
 	
 	public Racional(int numerador, int denominador) {
 		
-		int maior, menor, mdc = 1;
+		int numeradorAux = numerador, denominadorAux = denominador, mdc;
 		
-		if(numerador > denominador) {
-			
-			maior = numerador;
-			menor = denominador;		
-			
-		}else {
-			
-			maior = denominador;
-			menor = numerador;
-			
-		}
-			
-		
-		for(int i = 2; maior != 1 && menor != 1; i++) {
-			
-			
-			
-			while(maior % i == 0 && menor % i == 0) {
-				
-				if(maior % i == 0 && menor % i == 0) {
-					
-					mdc *= i;
-					
-				}
-				
-				if(maior % i == 0) {
-					maior /= i;
-				}
-				
-				if(menor % i == 0) {
-					menor /= i;
-				}
-				
-			}
-			
-		}
+		mdc = calculaMDC(numeradorAux, denominadorAux);
 		
 		setNumerador(numerador/mdc);
 		setDenominador(denominador/mdc);
@@ -66,6 +31,36 @@ public class Racional {
 	}
 	public void setDenominador(int denominador) {
 		this.denominador = denominador;
+	}
+	
+	public static int calculaMDC(int a, int b) {
+		
+		int mdc = 1;
+		
+		for(int i = 2; a != 1 && b != 1; i++) {
+			
+			while(a % i == 0 && b % i == 0) {
+				
+				if(a % i == 0 && b % i == 0) {
+					
+					mdc *= i;
+					
+				}
+				
+				if(a % i == 0) {
+					a /= i;
+				}
+				
+				if(b % i == 0) {
+					b /= i;
+				}
+				
+			}
+			
+		}
+		
+		return mdc;
+		
 	}
 	
 	
