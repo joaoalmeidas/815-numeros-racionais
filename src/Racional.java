@@ -38,23 +38,32 @@ public class Racional {
 		
 		for(int i = 2; (a > 1 && b > 1) && i < auxA || i < auxB; i++) {
 			
-			while(a % i == 0 && b % i == 0) {
+			if(a == b) {
 				
-				if(a % i == 0 && b % i == 0) {
+				mdc = a;
+				
+			}else {
+				
+				while(a % i == 0 && b % i == 0) {
 					
-					mdc *= i;
+					if(a % i == 0 && b % i == 0) {
+						
+						mdc *= i;
+						
+					}
 					
-				}
-				
-				if(a % i == 0) {
-					a /= i;
-				}
-				
-				if(b % i == 0) {
-					b /= i;
+					if(a % i == 0) {
+						a /= i;
+					}
+					
+					if(b % i == 0) {
+						b /= i;
+					}
+					
 				}
 				
 			}
+			
 			
 		}
 		
