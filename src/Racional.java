@@ -35,9 +35,9 @@ public class Racional {
 	
 	public static int calculaMDC(int a, int b) {
 		
-		int mdc = 1;
+		int mdc = 1, auxA = a, auxB = b;
 		
-		for(int i = 2; a != 1 && b != 1; i++) {
+		for(int i = 2; (a > 1 && b > 1) && i < auxA || i < auxB; i++) {
 			
 			while(a % i == 0 && b % i == 0) {
 				
