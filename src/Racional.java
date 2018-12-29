@@ -162,5 +162,9 @@ public class Racional {
 		
 	}
 	
+	public String toString() {
+		return String.format("%d/%d", getNumerador(), getDenominador());
+	}
+	
 	
 }

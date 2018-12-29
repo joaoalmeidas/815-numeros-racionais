@@ -20,23 +20,19 @@ public class RacionalTeste {
 		
 		System.out.println("Soma entre frações:\n");
 		
-		System.out.printf("%d/%d + %d/%d = %d/%d", soma1.getNumerador(), soma1.getDenominador(), soma2.getNumerador(),
-				soma2.getDenominador(), resSoma.getNumerador(), resSoma.getDenominador());
+		System.out.printf("%s + %s = %s", soma1.toString(), soma2.toString(), resSoma.toString());
 		
 		System.out.println("\n\nSubtração entre frações:\n");
 		
-		System.out.printf("%d/%d - %d/%d = %d/%d", subtracao1.getNumerador(), subtracao1.getDenominador(), subtracao2.getNumerador(),
-				subtracao2.getDenominador(), resSubtracao.getNumerador(), resSubtracao.getDenominador());
+		System.out.printf("%s + %s = %s", subtracao1.toString(), subtracao2.toString(), resSubtracao.toString());
 		
 		System.out.println("\n\nMultiplicação entre frações:\n");
 		
-		System.out.printf("%d/%d * %d/%d = %d/%d", mult1.getNumerador(), mult1.getDenominador(), mult2.getNumerador(),
-				mult2.getDenominador(), resMult.getNumerador(), resMult.getDenominador());
+		System.out.printf("%s + %s = %s", mult1.toString(), mult2.toString(), resMult.toString());
 		
 		System.out.println("\n\nDivisão entre frações:\n");
 		
-		System.out.printf("%d/%d * %d/%d = %d/%d", div1.getNumerador(), div1.getDenominador(), div2.getNumerador(),
-				div2.getDenominador(), resDiv.getNumerador(), resDiv.getDenominador());
+		System.out.printf("%s + %s = %s", div1.toString(), div2.toString(), resDiv.toString());
 	}
 
 }
