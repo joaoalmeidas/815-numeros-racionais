@@ -4,6 +4,10 @@ public class Racional {
 	private int numerador;
 	private int denominador;
 	
+	public Racional() {
+		this(1, 1);
+	}
+	
 	public Racional(int numerador, int denominador) {
 		
 		int maior, menor, mdc = 1;
@@ -44,7 +48,6 @@ public class Racional {
 			}
 			
 		}
-		
 		
 		setNumerador(numerador/mdc);
 		setDenominador(denominador/mdc);
