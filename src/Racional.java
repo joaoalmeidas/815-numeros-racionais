@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 
 public class Racional {
 	
@@ -165,6 +166,26 @@ public class Racional {
 	public String toString() {
 		return String.format("%d/%d", getNumerador(), getDenominador());
 	}
+	
+	public String toString(int digitos) {
+		
+		
+		String zeros = "";
+		
+		if(digitos > 0) {
+			zeros += "0.";
+		}
+		
+		for(int i = 0; i < digitos; i++) {
+			zeros += '0';
+		}
+		
+		DecimalFormat df = new DecimalFormat(zeros);
+		
+		return String.format(df.format((double)getNumerador()/(double)getDenominador()));
+	}
+	
+	
 	
 	
 }

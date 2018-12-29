@@ -21,18 +21,24 @@ public class RacionalTeste {
 		System.out.println("Soma entre frações:\n");
 		
 		System.out.printf("%s + %s = %s", soma1.toString(), soma2.toString(), resSoma.toString());
+		System.out.println("\nou\n"+resSoma.toString(3));
 		
 		System.out.println("\n\nSubtração entre frações:\n");
 		
 		System.out.printf("%s + %s = %s", subtracao1.toString(), subtracao2.toString(), resSubtracao.toString());
+		System.out.println("\nou\n"+resSubtracao.toString(2));
 		
 		System.out.println("\n\nMultiplicação entre frações:\n");
 		
 		System.out.printf("%s + %s = %s", mult1.toString(), mult2.toString(), resMult.toString());
+		System.out.println("\nou\n"+resMult.toString(1));
 		
 		System.out.println("\n\nDivisão entre frações:\n");
 		
 		System.out.printf("%s + %s = %s", div1.toString(), div2.toString(), resDiv.toString());
+		System.out.println("\nou\n"+resDiv.toString(5));
+		
+		
 	}
 
 }
