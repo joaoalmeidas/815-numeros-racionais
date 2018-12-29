@@ -2,19 +2,23 @@
 public class RacionalTeste {
 
 	public static void main(String[] args) {
-		Racional r = new Racional(5, 5);
-		Racional r2 = new Racional(3, 6);
-		Racional soma = Racional.somaRacional(r, r2);
+		Racional soma1 = new Racional(90, 90);
+		Racional soma2 = new Racional(3, 6);
+		Racional resSoma = Racional.somaRacional(soma1, soma2);
 		
-		System.out.println(r.getNumerador());
-		System.out.println(r.getDenominador());
+		Racional subtracao1 = new Racional(29, 6);
+		Racional subtracao2 = new Racional(30, 30);
+		Racional resSubtracao = Racional.subtraiRacional(subtracao1, subtracao2);
 		
-		System.out.println(r2.getNumerador());
-		System.out.println(r2.getDenominador());
+		System.out.println("Soma entre frações:\n");
 		
-		System.out.println(soma.getNumerador());
-		System.out.println(soma.getDenominador());
-
+		System.out.printf("%d/%d + %d/%d = %d/%d", soma1.getNumerador(), soma1.getDenominador(), soma2.getNumerador(),
+				soma2.getDenominador(), resSoma.getNumerador(), resSoma.getDenominador());
+		
+		System.out.println("\n\nSubtração entre frações:\n");
+		
+		System.out.printf("%d/%d + %d/%d = %d/%d", subtracao1.getNumerador(), subtracao1.getDenominador(), subtracao2.getNumerador(),
+				subtracao2.getDenominador(), resSubtracao.getNumerador(), resSubtracao.getDenominador());
 	}
 
 }
