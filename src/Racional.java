@@ -19,7 +19,6 @@ public class Racional {
 		
 	}
 	
-	
 	public int getNumerador() {
 		return numerador;
 	}
@@ -61,6 +60,29 @@ public class Racional {
 		
 		return mdc;
 		
+	}
+	
+	public static Racional somaRacional(Racional a, Racional b) {
+		
+		Racional resultado = new Racional();
+		
+		if(a.getDenominador() == b.getDenominador()) {
+			
+			resultado.setDenominador(a.getDenominador());
+			resultado.setNumerador(a.getNumerador() + b.getNumerador());
+			
+		}else {
+			
+			resultado.setDenominador(a.getDenominador() * b.getDenominador());
+			resultado.setNumerador((resultado.getDenominador() / a.getDenominador() * a.getNumerador()) + 
+								   (resultado.getDenominador() / b.getDenominador() * b.getNumerador()));
+			
+		}
+		
+		resultado.setNumerador(resultado.getNumerador() / calculaMDC(resultado.getNumerador(), resultado.getDenominador()));
+		resultado.setDenominador(resultado.getDenominador() / calculaMDC(resultado.getNumerador(), resultado.getDenominador()));
+		
+		return resultado;
 	}
 	
 	
